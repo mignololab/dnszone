@@ -20,6 +20,9 @@
       preference: 10
     - exchange: alt4.aspmx.l.google.com.
       preference: 10
+_github-challenge-mignololab:
+  type: TXT
+  value: f17ca14a0b
 mail:
   ttl: 43200
   type: CNAME
