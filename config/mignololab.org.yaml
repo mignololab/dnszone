@@ -1,0 +1,28 @@
+---
+? ''
+: - type: A
+    value: 188.226.157.146
+  - ttl: 1800
+    type: MX
+    values:
+    - exchange: aspmx.l.google.com.
+      preference: 1
+    - exchange: alt1.aspmx.l.google.com.
+      preference: 5
+    - exchange: alt2.aspmx.l.google.com.
+      preference: 5
+    - exchange: alt3.aspmx.l.google.com.
+      preference: 10
+    - exchange: alt4.aspmx.l.google.com.
+      preference: 10
+mail:
+  ttl: 43200
+  type: CNAME
+  value: ghs.googlehosted.com.
+mignololab._domainkey:
+  type: TXT
+  value: v=DKIM1\; k=rsa\; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCGX+Vbdyb1jcV3TNkDTRVRnfcg8mbuYQjCNbUr4+0Kaj1ebHR0PJ1C5u2cazbANvoNZ4NkgUxIxOOuOxDcCWcBJZEmez0MDxeFiItfdRGZSCrUMzED/JpJPScxDnC6ojgO86l8f0CkwIjce3w1wRHxdGjR646mUFJ9mcEhMPEaDwIDAQAB
+www:
+  ttl: 43200
+  type: CNAME
+  value: mignololab.org.

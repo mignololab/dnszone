@@ -1,0 +1,24 @@
+name: dns-sync
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'config/*.yaml'
+  workflow_dispatch:
+
+env:
+  DIGITALOCEAN_TOKEN: ${{ secrets.DIGITALOCEAN_TOKEN }}
+
+jobs:
+  publish:
+    name: Publish DNS config
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Publish
+        uses: solvaholic/octodns-sync@main
+        with:
+          config_path: config/production.yaml
+          #doit: '--doit'

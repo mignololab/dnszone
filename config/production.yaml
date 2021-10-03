@@ -1,0 +1,21 @@
+---
+providers:
+  config:
+    class: octodns.provider.yaml.YamlProvider
+    directory: ./config
+    default_ttl: 3600
+    enforce_order: True
+  zone:
+    class: octodns.source.axfr.ZoneFileSource
+    directory: ./config
+  do:
+    class: octodns.provider.digitalocean.DigitalOceanProvider
+    token: env/DIGITALOCEAN_TOKEN
+
+zones:
+  mignololab.org.:
+    sources:
+      - config
+    targets:
+      - do
+...
