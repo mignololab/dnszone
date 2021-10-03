@@ -1,7 +1,12 @@
 ---
 ? ''
-: - type: A
-    value: 188.226.157.146
+: - ttl: 43200
+    type: A
+    values:
+    - 185.199.108.153
+    - 185.199.109.153
+    - 185.199.110.153
+    - 185.199.111.153
   - ttl: 1800
     type: MX
     values:
@@ -25,4 +30,4 @@ mignololab._domainkey:
 www:
   ttl: 43200
   type: CNAME
-  value: mignololab.org.
+  value: mignololab.github.io.
