@@ -15,12 +15,91 @@
   - type: TXT
     values:
     - v=spf1 mx a:mail.casaricci.it include:mailgun.org -all
+_caldavs._tcp:
+- ttl: 43200
+  type: SRV
+  value:
+    port: 443
+    priority: 0
+    target: mail.casaricci.it.
+    weight: 1
+- type: TXT
+  value: path=/SOGo/dav/
+_carddavs._tcp:
+- ttl: 43200
+  type: SRV
+  value:
+    port: 443
+    priority: 0
+    target: mail.casaricci.it.
+    weight: 1
+- type: TXT
+  value: path=/SOGo/dav/
 _dmarc:
   type: TXT
   value: v=DMARC1\; p=quarantine\; rua=mailto:postmaster@casaricci.it\; fo=1\; ruf=mailto:postmaster@casaricci.it
 _github-challenge-mignololab:
   type: TXT
   value: f17ca14a0b
+_imap._tcp:
+  ttl: 43200
+  type: SRV
+  value:
+    port: 143
+    priority: 0
+    target: mail.casaricci.it.
+    weight: 1
+_imaps._tcp:
+  ttl: 43200
+  type: SRV
+  value:
+    port: 993
+    priority: 0
+    target: mail.casaricci.it.
+    weight: 1
+_pop3._tcp:
+  ttl: 43200
+  type: SRV
+  value:
+    port: 110
+    priority: 0
+    target: mail.casaricci.it.
+    weight: 1
+_pop3s._tcp:
+  ttl: 43200
+  type: SRV
+  value:
+    port: 995
+    priority: 0
+    target: mail.casaricci.it.
+    weight: 1
+_sieve._tcp:
+  ttl: 43200
+  type: SRV
+  value:
+    port: 4190
+    priority: 0
+    target: mail.casaricci.it.
+    weight: 1
+_smtp._tls:
+  type: TXT
+  value: v=TLSRPTv1\; rua=mailto:postmaster@casaricci.it
+_smtps._tcp:
+  ttl: 43200
+  type: SRV
+  value:
+    port: 465
+    priority: 0
+    target: mail.casaricci.it.
+    weight: 1
+_submission._tcp:
+  ttl: 43200
+  type: SRV
+  value:
+    port: 587
+    priority: 0
+    target: mail.casaricci.it.
+    weight: 1
 autoconfig:
   ttl: 43200
   type: CNAME
