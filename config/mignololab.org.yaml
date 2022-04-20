@@ -10,26 +10,28 @@
   - ttl: 1800
     type: MX
     values:
-    - exchange: aspmx.l.google.com.
+    - exchange: mail.casaricci.it.
       preference: 1
-    - exchange: alt1.aspmx.l.google.com.
-      preference: 5
-    - exchange: alt2.aspmx.l.google.com.
-      preference: 5
-    - exchange: alt3.aspmx.l.google.com.
-      preference: 10
-    - exchange: alt4.aspmx.l.google.com.
-      preference: 10
+  - type: TXT
+    values:
+    - v=spf1 mx a:mail.casaricci.it include:mailgun.org -all
+_dmarc:
+  type: TXT
+  value: v=DMARC1\; p=quarantine\; rua=mailto:postmaster@casaricci.it\; fo=1\; ruf=mailto:postmaster@casaricci.it
 _github-challenge-mignololab:
   type: TXT
   value: f17ca14a0b
-mail:
+autoconfig:
   ttl: 43200
   type: CNAME
-  value: ghs.googlehosted.com.
-mignololab._domainkey:
+  value: mail.casaricci.it.
+autodiscover:
+  ttl: 43200
+  type: CNAME
+  value: mail.casaricci.it.
+dkim._domainkey:
   type: TXT
-  value: v=DKIM1\; k=rsa\; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCGX+Vbdyb1jcV3TNkDTRVRnfcg8mbuYQjCNbUr4+0Kaj1ebHR0PJ1C5u2cazbANvoNZ4NkgUxIxOOuOxDcCWcBJZEmez0MDxeFiItfdRGZSCrUMzED/JpJPScxDnC6ojgO86l8f0CkwIjce3w1wRHxdGjR646mUFJ9mcEhMPEaDwIDAQAB
+  value: "v=DKIM1;k=rsa;t=s;s=email;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApVanbcmMIIaUeRWkPEBYCq7vETjC8ngnpJvrpajAdcTxxl5Cmx1Fqo1gfLhwgfCNsnzMZQO/NXKYRKvGAD3WRBlxOKuSotFh9DJXcbYvGaIcenqmm9nsN4xE5zxkqV0nMBMXhHk+kx4pHNhXGRcPk1Xd8kHWlKg409eBCMPUxy0uaFPFxVrdcu/h22k+k5y6b61w/pdi6/ULGb8e4LGBi7bo9gxeN47kMtxtQhPkLDB54z64yrv8h0B85qG+U+OOTAUfIbZ9WAZuS5LCJaKnmxcNeglfeIRDb9ntZDk7NzgUWm52DH19XoFIICHqtRA1y9wpPY3Ngn1w4eQCKmn4YwIDAQAB"
 www:
   ttl: 43200
   type: CNAME
