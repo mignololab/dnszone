@@ -32,6 +32,9 @@ autodiscover:
 dkim._domainkey:
   type: TXT
   value: v=DKIM1\;k=rsa\;t=s\;s=email\;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApVanbcmMIIaUeRWkPEBYCq7vETjC8ngnpJvrpajAdcTxxl5Cmx1Fqo1gfLhwgfCNsnzMZQO/NXKYRKvGAD3WRBlxOKuSotFh9DJXcbYvGaIcenqmm9nsN4xE5zxkqV0nMBMXhHk+kx4pHNhXGRcPk1Xd8kHWlKg409eBCMPUxy0uaFPFxVrdcu/h22k+k5y6b61w/pdi6/ULGb8e4LGBi7bo9gxeN47kMtxtQhPkLDB54z64yrv8h0B85qG+U+OOTAUfIbZ9WAZuS5LCJaKnmxcNeglfeIRDb9ntZDk7NzgUWm52DH19XoFIICHqtRA1y9wpPY3Ngn1w4eQCKmn4YwIDAQAB
+pic._domainkey:
+  type: TXT
+  value: k=rsa\; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApvIGrZUDbQ37Wl2THJZx6eujNLFikay0j+qtUvdqW6uaxDH+g626SbgvSdPS5kUfGW0F+uTSDG+7sFVEyPUHCeBB7Gm0pg2qf6Tu1WsMeki6MOY3lZxIRcZNKhwbBnkd5JSuXRKjExv7R+EGczNIQ7tqHyZB4+zma+6iXLC+W4pX3WmDgH1GpATtQ5ldzqILFNPA6Zb5bBbRxqHykWyiS0WC5fn5qWQp91tw/mhgTaRCb/OFtnluc/t2923lODM2OFPxmtsXgsKgGeFWwkG0EzujW5OHwez7yxhJs4jz20N7jDStijz1i95OkLBULtF/7W62hXqPIIAd2Ma4W/1LlwIDAQAB
 www:
   ttl: 43200
   type: CNAME
