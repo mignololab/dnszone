@@ -15,6 +15,13 @@
   - type: TXT
     values:
     - v=spf1 mx a:mail.casaricci.it include:mailgun.org -all
+_autodiscover._tcp:
+  type: SRV
+  value:
+    port: 443
+    priority: 0
+    target: mail.casaricci.it.
+    weight: 1
 _caldavs._tcp:
 - ttl: 43200
   type: SRV
