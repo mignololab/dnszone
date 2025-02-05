@@ -6,7 +6,7 @@ providers:
     default_ttl: 3600
     enforce_order: True
   do:
-    class: octodns.provider.digitalocean.DigitalOceanProvider
+    class: octodns_digitalocean.DigitalOceanProvider
     token: env/DIGITALOCEAN_TOKEN
 
 zones:
