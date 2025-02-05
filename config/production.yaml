@@ -5,9 +5,6 @@ providers:
     directory: ./config
     default_ttl: 3600
     enforce_order: True
-  zone:
-    class: octodns.source.axfr.ZoneFileSource
-    directory: ./config
   do:
     class: octodns.provider.digitalocean.DigitalOceanProvider
     token: env/DIGITALOCEAN_TOKEN
