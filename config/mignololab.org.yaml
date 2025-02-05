@@ -48,6 +48,9 @@ _dmarc:
 _github-challenge-mignololab:
   type: TXT
   value: f17ca14a0b
+_github-pages-challenge-mignololab:
+  type: TXT
+  value: de3aa3a57f7c0ad65862acb591294e
 _imap._tcp:
   ttl: 43200
   type: SRV
