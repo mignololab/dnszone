@@ -10,6 +10,7 @@ on:
 
 env:
   DIGITALOCEAN_TOKEN: ${{ secrets.DIGITALOCEAN_TOKEN }}
+  HETZNER_TOKEN: ${{ secrets.HETZNER_TOKEN }}
 
 jobs:
   publish:
