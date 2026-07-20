@@ -5,14 +5,19 @@ providers:
     directory: ./config
     default_ttl: 3600
     enforce_order: True
-  do:
+  digitalocean:
     class: octodns_digitalocean.DigitalOceanProvider
     token: env/DIGITALOCEAN_TOKEN
+  hetzner:
+    class: octodns_hetzner.HetznerProvider
+    token: env/HETZNER_TOKEN
+    backend: hcloud
 
 zones:
   mignololab.org.:
     sources:
       - config
     targets:
-      - do
+      - digitalocean
+      - hetzner
 ...
